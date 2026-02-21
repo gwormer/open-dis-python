@@ -51,3 +51,18 @@ The docs will be generated in the `docs/opendis` folder.
 ## Poetry setup
 1. `poetry install` or `poetry update`
 1. `poetry run python examples/dis_receiver.py` or `poetry shell` && `python examples/dis_receiver.py`
+
+## AFSIM twin connector example
+
+A basic moving-entity simulation is included to feed an AFSIM DIS listener:
+
+```bash
+python3 examples/afsim_twin_connector.py --destination <afsim_ip> --port 3001
+```
+
+Useful knobs:
+- `--rate-hz`: packet transmit rate
+- `--speed-mps`: linear speed of the simulated entity
+- `--turn-rate-dps`: heading change rate for a curved path
+- `--entity-number`, `--site`, `--application`: DIS entity identifiers
+
